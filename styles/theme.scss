@@ -1,0 +1,40 @@
+html {
+  //variables
+  --primary-rgb: 41, 175, 202;
+
+  --color-main: #ffffff;
+  --color-main-dark: #303030;
+
+  //primary
+  --color-primary: #30c8e7;
+  --color-primary-add: #d5f3ff;
+
+  --color-primary-hover: rgb(var(--primary-rgb));
+  --color-primary-hover-add: rgba(var(--primary-rgb), 0.2);
+
+  --color-primary-active: #cadae4;
+
+  //secondary
+  --color-secondary: #43d7b7;
+  --color-secondary-add: #d5f3ff;
+
+  --color-secondary-hover: #3dc5a8;
+  --color-secondary-hover-add: #d5f3ff;
+
+  --color-secondary-active: #cadae4;
+
+  //disable
+  --color-disable: #ffffff;
+  --color-disable-add: #f1efef;
+
+  //other
+  --color-bg: #232832;
+  --color-bg-add: #323741;
+
+  --color-font: #dde1e2;
+
+  --color-error: #ef4949;
+  --color-error-add: #ff000012;
+
+  --color-skeleton: #808080;
+}

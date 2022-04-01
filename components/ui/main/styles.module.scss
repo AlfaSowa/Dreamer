@@ -1,0 +1,11 @@
+.root {
+  min-height: 100vh;
+  max-height: 100vh;
+  overflow-y: auto;
+  background: var(--color-bg-add);
+  padding: 0 0 0 250px;
+
+  &.public {
+    padding: 50px 0 0 250px;
+  }
+}

@@ -1,0 +1,16 @@
+.sidebar {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  background: var(--color-bg);
+  width: 250px;
+  padding: 12px 0;
+
+  .inner {
+    padding: 8px 0;
+  }
+
+  &.public {
+    top: 50px;
+  }
+}
