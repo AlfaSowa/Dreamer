@@ -6,8 +6,7 @@ import {
 } from "../api/interceptors";
 
 export const Axios = axios.create({
-  // baseURL: "https://guidegalaxy.herokuapp.com/",
-  // baseURL: 'https://api.test.b2btrade.ru/api/',
+  baseURL: "http://localhost:5000/",
 });
 
 Axios.interceptors.request.use(requestInterceptor, responseInterceptorError);

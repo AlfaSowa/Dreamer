@@ -1,4 +1,3 @@
 export interface ILayout {
-  title?: string;
-  padding?: boolean;
+  header?: JSX.Element;
 }

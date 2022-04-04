@@ -1,5 +1,5 @@
 import { FC } from "react";
-import Header from "../../components/header/header.component";
+import SidebarDreamtypes from "../../components/sidebar/navigations/dreamstypes/dreamtypes.component";
 import SidebarNavigationsMain from "../../components/sidebar/navigations/main/sidebar-navigations-main.component";
 import Sidebar from "../../components/sidebar/sidebar.component";
 import MainBlock from "../../components/ui/main/main.component";
@@ -7,17 +7,14 @@ import { ILayout } from "../../interfaces/layouts";
 
 type IPublicLayout = ILayout;
 
-const PublicLayout: FC<IPublicLayout> = ({ children, title, padding }) => (
+const PublicLayout: FC<IPublicLayout> = ({ children, header }) => (
   <>
-    <Header />
-
     <Sidebar>
-      <SidebarNavigationsMain />
+      {/* <SidebarNavigationsMain /> */}
+      <SidebarDreamtypes />
     </Sidebar>
 
-    <MainBlock title={title} padding={padding}>
-      {children}
-    </MainBlock>
+    <MainBlock header={header}>{children}</MainBlock>
   </>
 );
 

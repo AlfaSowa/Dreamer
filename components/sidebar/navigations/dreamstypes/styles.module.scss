@@ -1,0 +1,21 @@
+.root {
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 12px;
+    font-size: 0.8rem;
+    height: 30px;
+    cursor: pointer;
+
+    .actions {
+      display: none;
+    }
+
+    &:hover {
+      .actions {
+        display: flex;
+      }
+    }
+  }
+}

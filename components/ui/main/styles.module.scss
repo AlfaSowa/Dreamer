@@ -3,9 +3,9 @@
   max-height: 100vh;
   overflow-y: auto;
   background: var(--color-bg-add);
-  padding: 0 0 0 250px;
+  padding: 0 0 0 $sidebar-width;
 
-  &.public {
-    padding: 50px 0 0 250px;
+  &.withHeader {
+    padding: $header-height 0 0 $sidebar-width;
   }
 }

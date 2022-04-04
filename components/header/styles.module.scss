@@ -7,16 +7,16 @@
   );
   display: flex;
   align-items: stretch;
-  height: 50px;
+  height: $header-height;
   position: fixed;
   width: 100%;
+  top: 0;
 
-  .logo {
+  .title {
     flex: 0 0 250px;
     display: flex;
     align-items: center;
     color: var(--color-main);
-    font-size: 1.5rem;
 
     .icon {
       margin: 0 8px 0 0;

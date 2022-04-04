@@ -1,13 +1,19 @@
 import { FC } from "react";
+import { SITE_NAME } from "../../interfaces/constants";
 import Container from "../lib/container/container.component";
-import Logo from "../lib/logo/logo.component";
 import UserMenu from "../user/menu/user-menu.component";
 import styles from "./styles.module.scss";
 
-const Header: FC = () => (
+interface IHeader {
+  title?: string;
+}
+
+const Header: FC<IHeader> = ({ title }) => (
   <header className={styles.root}>
     <Container alignCenter padding flex>
-      <Logo />
+      <div className={styles.title}>
+        <span>{title || SITE_NAME}</span>
+      </div>
 
       <div className={styles.inner}>
         <UserMenu />
@@ -15,5 +21,9 @@ const Header: FC = () => (
     </Container>
   </header>
 );
+
+Header.defaultProps = {
+  title: null,
+};
 
 export default Header;
