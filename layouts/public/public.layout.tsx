@@ -1,8 +1,8 @@
 import { FC } from "react";
-import SidebarDreamtypes from "../../components/sidebar/navigations/dreamstypes/dreamtypes.component";
-import SidebarNavigationsMain from "../../components/sidebar/navigations/main/sidebar-navigations-main.component";
-import Sidebar from "../../components/sidebar/sidebar.component";
-import MainBlock from "../../components/ui/main/main.component";
+import SidebarDreamtypes from "../../components/sidebar/navigations/dreamstypes/dreamtypes";
+import SidebarNavigationsMain from "../../components/sidebar/navigations/main/sidebar-navigations-main";
+import Sidebar from "../../components/sidebar/sidebar";
+import MainBlock from "../../components/ui/main/main";
 import { ILayout } from "../../interfaces/layouts";
 
 type IPublicLayout = ILayout;

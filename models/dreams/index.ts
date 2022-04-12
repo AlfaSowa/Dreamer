@@ -4,6 +4,7 @@ import { $dreamersTypes } from "../dreamerstypes";
 
 export const addDreamsFx = createEvent<string>();
 export const updateDreamsFx = createEvent<IDreamtype>();
+
 export const $currentDreamType = createStore<IDreamtype>(null).on(
   updateDreamsFx,
   (_, dreamType) => {
@@ -24,3 +25,12 @@ sample({
   },
   target: updateDreamsFx,
 });
+
+// dreams item details
+export const updateDreamsItemDetailsFx = createEvent<any>();
+
+export const $dreamsItemDetails = createStore<any>(null).on(
+  updateDreamsItemDetailsFx,
+  // eslint-disable-next-line @typescript-eslint/no-unsafe-return
+  (_, data) => data
+);
