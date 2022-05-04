@@ -1,18 +1,17 @@
 import Link from "next/link";
 import { FC } from "react";
-import styles from "./styles.module.scss";
 
 interface ISidebarMenuItem {
   link?: string;
 }
 
 const SidebarMenuItem: FC<ISidebarMenuItem> = ({ children, link }) => (
-  <li className={styles.elem}>
+  <li>
     {!link && <div>{children}</div>}
 
     {link && (
       <Link href={link}>
-        <a className={styles.link}>{children}</a>
+        <a className="block">{children}</a>
       </Link>
     )}
   </li>

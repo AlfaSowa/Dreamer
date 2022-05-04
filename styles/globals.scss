@@ -1,3 +1,6 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 @import "./theme.scss";
 
 * {
@@ -35,8 +38,7 @@ svg {
   fill: currentColor;
 }
 
-img,
-svg {
+img {
   width: 100% !important;
   height: 100% !important;
 }
@@ -57,7 +59,6 @@ select,
 button,
 textarea {
   outline: none;
-  border: none;
   background: none;
 }
 

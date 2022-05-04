@@ -5,7 +5,6 @@ import DreamsItemCard from "../../../components/dreams/item/card/card";
 import DreamsItemList from "../../../components/dreams/item/list/list";
 import DreamsItemRow from "../../../components/dreams/item/row/row";
 import { useDreams } from "../../../hooks/account/useDreams";
-import styles from "./styles.module.scss";
 
 const DREAM_STEPS = [
   {
@@ -77,7 +76,7 @@ const DreamsItemPage: FC = () => {
   );
 
   return (
-    <div className={styles.root}>
+    <div className="pl-4">
       <DreamsItemList>
         {DREAM_STEPS.map((item) => (
           <DreamsItemRow key={item.id} rowId={item?.id}>

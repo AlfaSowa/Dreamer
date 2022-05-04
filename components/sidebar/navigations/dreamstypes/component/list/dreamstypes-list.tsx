@@ -1,8 +1,7 @@
 import { FC } from "react";
-import styles from "./styles.module.scss";
 
 const SidebarDreamtypesList: FC = ({ children }) => (
-  <nav className={styles.root}>
+  <nav>
     <ul>{children}</ul>
   </nav>
 );

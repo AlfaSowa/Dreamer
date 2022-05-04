@@ -1,8 +1,7 @@
 import { FC } from "react";
-import styles from "./styles.module.scss";
 
 const DreamsCollectionList: FC = ({ children }) => (
-  <div className={styles.root}>{children}</div>
+  <div className="grid grid-cols-4 grid-flow-row gap-2">{children}</div>
 );
 
 export default DreamsCollectionList;

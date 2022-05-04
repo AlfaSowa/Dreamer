@@ -2,13 +2,12 @@ import { FC } from "react";
 import DreamsCollectionCard from "../../../components/dreams/collection/card/card";
 import DreamsCollectionList from "../../../components/dreams/collection/list/list";
 import { useDreams } from "../../../hooks/account/useDreams";
-import styles from "./styles.module.scss";
 
 const DreamsCollectionPage: FC = () => {
   const { currentDreamType } = useDreams();
 
   return (
-    <div className={styles.root}>
+    <div className="flex flex-col p-3 gap-4">
       <DreamsCollectionList>
         {currentDreamType?.children.map((item) => (
           <DreamsCollectionCard

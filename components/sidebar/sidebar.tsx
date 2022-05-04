@@ -1,9 +1,8 @@
 import { FC } from "react";
-import styles from "./styles.module.scss";
 
 const Sidebar: FC = ({ children }) => (
-  <div className={styles.sidebar}>
-    <div className={styles.inner}>{children}</div>
+  <div className="fixed top-0 bottom-0 w-[230px] py-[12px] bg-[color:var(--color-bg-add)]">
+    <div className="py-[8px]">{children}</div>
   </div>
 );
 

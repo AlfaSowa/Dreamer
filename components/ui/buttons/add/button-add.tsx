@@ -1,11 +1,14 @@
 import { FC } from "react";
 import AddIcon from "@mui/icons-material/Add";
-import styles from "./styles.module.scss";
 import { IButton } from "../interface";
 
 const ButtonAdd: FC<IButton> = ({ onClick }) => (
-  <button className={styles.root} onClick={onClick} type="button">
-    <AddIcon />
+  <button
+    className="w-5 h-5 p-0 rounded border border-black"
+    onClick={onClick}
+    type="button"
+  >
+    <AddIcon className="w-auto h-auto" />
   </button>
 );
 

@@ -3,7 +3,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { FC } from "react";
 import { useDreams } from "../../../../hooks/account/useDreams";
-import styles from "./styles.module.scss";
 
 interface IDreamsItemRow {
   rowId: any;
@@ -12,17 +11,12 @@ const DreamsItemRow: FC<IDreamsItemRow> = ({ children, rowId }) => {
   const { dreamsItemDetails } = useDreams();
 
   return (
-    <div className={styles.root}>
-      <div className={styles.cards}>{children}</div>
+    <div className="relative">
+      <div className="grid grid-cols-3 grid-flow-row gap-2">{children}</div>
+
       {rowId === dreamsItemDetails?.parentId && (
         <div>
           <div>{dreamsItemDetails?.name}</div>
-          <div>123123123</div>
-          <div>123123123</div>
-          <div>123123123</div>
-          <div>123123123</div>
-          <div>123123123</div>
-          <div>123123123</div>
         </div>
       )}
     </div>

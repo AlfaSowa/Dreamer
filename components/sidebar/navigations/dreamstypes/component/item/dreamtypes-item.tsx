@@ -1,6 +1,5 @@
 import { FC, MouseEvent, useCallback } from "react";
 import StickyNote2Icon from "@mui/icons-material/StickyNote2";
-import styles from "./styles.module.scss";
 import ButtonAdd from "../../../../../ui/buttons/add/button-add";
 import ButtonSettings from "../../../../../ui/buttons/settings/button-settings";
 
@@ -19,14 +18,14 @@ const SidebarDreamtypesItem: FC = ({ children }) => {
   );
 
   return (
-    <div className={styles.root}>
-      <div className={styles.icon}>
-        <StickyNote2Icon />
+    <div className="group flex items-center px-1 h-7 text-sm">
+      <StickyNote2Icon className="w-4 h-4 mr-[4px]" />
+
+      <div className="whitespace-nowrap overflow-hidden text-ellipsis">
+        {children}
       </div>
 
-      <div>{children}</div>
-
-      <div className={styles.actions}>
+      <div className="ml-auto hidden gap-1 group-hover:flex">
         <ButtonSettings onClick={handleClickSettings} />
         <ButtonAdd onClick={handleClickAdd} />
       </div>

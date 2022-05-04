@@ -10,7 +10,6 @@ type IPublicLayout = ILayout;
 const PublicLayout: FC<IPublicLayout> = ({ children, header }) => (
   <>
     <Sidebar>
-      {/* <SidebarNavigationsMain /> */}
       <SidebarDreamtypes />
     </Sidebar>
 

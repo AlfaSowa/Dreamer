@@ -5,7 +5,6 @@ import Link from "next/link";
 import SidebarMenuItem from "../../components/menu/sidebar-menu-item";
 import SidebarMenu from "../../components/menu/sidebar-menu";
 import SidebarDreamtypesItem from "./component/item/dreamtypes-item";
-import styles from "./styles.module.scss";
 import ButtonAdd from "../../../ui/buttons/add/button-add";
 import { useDreams } from "../../../../hooks/account/useDreams";
 
@@ -31,13 +30,13 @@ const SidebarDreamtypes: FC = () => {
   }, [addDreamType]);
 
   return (
-    <div className={styles.root}>
-      <div className={styles.header}>
+    <div>
+      <div className="group flex justify-between items-center px-1 py-[12px] text-sm	h-[30px] cursor-pointer">
         <Link href="/dreams">
-          <a className={styles.title}>Категории планов</a>
+          <a>Категории планов</a>
         </Link>
 
-        <div className={styles.actions}>
+        <div className="hidden group-hover:flex">
           <ButtonAdd onClick={handleClick} />
         </div>
       </div>
