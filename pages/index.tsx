@@ -1,12 +1,14 @@
 import { NextPage } from "next";
-import PublicLayout from "../layouts/public/public.layout";
-import FrontPage from "../DreamerPages/frontpage/frontpage";
-import Header from "../components/header/header";
+import PublicLayout from "../layouts/public.layout";
 
-const Home: NextPage = () => (
-  <PublicLayout header={<Header />}>
-    <FrontPage />
-  </PublicLayout>
-);
+const Home: NextPage = () => {
+  return (
+    <PublicLayout>
+      <div>123</div>
+      <div>123</div>
+      <div>123</div>
+    </PublicLayout>
+  );
+};
 
 export default Home;

@@ -1,9 +1,10 @@
 module.exports = {
   content: [
     "./pages/**/*.{ts,tsx}",
-    "./components/**/*.{ts,tsx}",
-    "./DreamerPages/**/*.{ts,tsx}",
+    "./shared/**/*.{ts,tsx}",
     "./layouts/**/*.{ts,tsx}",
+    "./widgets/**/*.{ts,tsx}",
+    "./features/**/*.{ts,tsx}",
   ],
   theme: {
     extend: {

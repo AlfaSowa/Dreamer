@@ -1,12 +1,24 @@
 import { NextPage } from "next";
-import Header from "../../components/header/header";
-import DreamsTypesPage from "../../DreamerPages/dreams/types/types";
-import PublicLayout from "../../layouts/public/public.layout";
+import PublicLayout from "../../layouts/public.layout";
 
-const DreamsTypes: NextPage = () => (
-  <PublicLayout header={<Header />}>
-    <DreamsTypesPage />
-  </PublicLayout>
-);
+const DreamsTypes: NextPage = () => {
+  return (
+    <PublicLayout>
+      <div>DreamsTypes</div>
+      <div>DreamsTypes</div>
+      <div>DreamsTypes</div>
+      <div>DreamsTypes</div>
+      <div>DreamsTypes</div>
+      <div>DreamsTypes</div>
+      <div>DreamsTypes</div>
+      <div>DreamsTypes</div>
+      <div>DreamsTypes</div>
+      <div>DreamsTypes</div>
+      <div>DreamsTypes</div>
+      <div>DreamsTypes</div>
+      <div>DreamsTypes</div>
+    </PublicLayout>
+  );
+};
 
 export default DreamsTypes;
