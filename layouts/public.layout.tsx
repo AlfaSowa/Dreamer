@@ -1,11 +1,16 @@
 import { FC } from "react";
-import { MainSidebarNavigations } from "../features/main-sidebar-navigation";
+import { DreamsSidebar } from "../features/dreams-sidebar";
+import { NavigationSidebar } from "../features/navigation-sidebar";
 import { Container } from "../shared/components";
 import { MainBlock } from "../widgets/main";
+import { Sidebar } from "../widgets/sidebar";
 
 const PublicLayout: FC = ({ children }) => (
   <Container>
-    <MainSidebarNavigations />
+    <Sidebar>
+      <NavigationSidebar />
+      <DreamsSidebar />
+    </Sidebar>
 
     <MainBlock>{children}</MainBlock>
   </Container>

@@ -7,11 +7,17 @@ interface ISidebarItem {
 
 export const SidebarItem: FC<ISidebarItem> = ({ children, link }) => (
   <li>
-    {!link && <div>{children}</div>}
+    {!link && (
+      <div className="flex items-center h-[30px] px-2 hover:bg-sky-700">
+        {children}
+      </div>
+    )}
 
     {link && (
       <Link href={link}>
-        <a className="block">{children}</a>
+        <a className="flex items-center h-[30px] px-2 hover:bg-sky-700">
+          {children}
+        </a>
       </Link>
     )}
   </li>
