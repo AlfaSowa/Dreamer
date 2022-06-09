@@ -5,7 +5,7 @@ const NavigationSidebar: FC = () => {
   return (
     <SidebarList>
       <SidebarItem link="/">Главная</SidebarItem>
-      <SidebarItem link="/dreams">Dreams</SidebarItem>
+      <SidebarItem link="/projects">Проекты</SidebarItem>
     </SidebarList>
   );
 };

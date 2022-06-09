@@ -1,13 +1,13 @@
 import { FC } from "react";
 import { ButtonIcon, Stack, Typography } from "../../../shared/components";
-import { useDreams } from "../../../shared/hooks";
+import { useProjects } from "../../../shared/hooks";
 
-const DreamsSidebar: FC = () => {
-  const { dreams } = useDreams();
+const ProjectsSidebar: FC = () => {
+  const { projects } = useProjects();
   return (
     <div>
       <Stack className="group px-1 cursor-pointer h-[25px]">
-        <Typography>Список задач</Typography>
+        <Typography>Список проектов</Typography>
 
         <Stack className="ml-auto hidden group-hover:flex">
           <ButtonIcon size="small" onClick={() => {}}>
@@ -20,7 +20,7 @@ const DreamsSidebar: FC = () => {
       </Stack>
 
       <Stack direction="col" className="mt-2">
-        {dreams.map((d) => (
+        {projects.map((d) => (
           <div
             className="h-[24px] flex items-center hover:bg-sky-700 px-2 cursor-pointer"
             key={d.id}
@@ -33,4 +33,4 @@ const DreamsSidebar: FC = () => {
   );
 };
 
-export default DreamsSidebar;
+export default ProjectsSidebar;

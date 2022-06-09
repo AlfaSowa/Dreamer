@@ -9,7 +9,7 @@ const MainBlock: FC = ({ children }) => (
       "overflow-y-auto",
       "bg-[color:var(--color-bg)]",
       "flex-1",
-      "pl-4"
+      "px-4"
     )}
   >
     {children}
