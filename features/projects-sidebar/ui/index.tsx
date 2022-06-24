@@ -1,9 +1,16 @@
-import { FC } from "react";
+import { FC, useEffect } from "react";
 import { ButtonIcon, Stack, Typography } from "../../../shared/components";
 import { useProjects } from "../../../shared/hooks";
 
 const ProjectsSidebar: FC = () => {
-  const { projects } = useProjects();
+  const { projects, getProjects } = useProjects();
+
+  useEffect(() => {
+    if (projects.length === 0) {
+      getProjects();
+    }
+  }, [getProjects, projects.length]);
+
   return (
     <div>
       <Stack className="group px-1 cursor-pointer h-[25px]">

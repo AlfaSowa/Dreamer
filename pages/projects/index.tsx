@@ -1,22 +1,26 @@
 import { NextPage } from "next";
 import { ProjectCard } from "../../entities/project";
 import PublicLayout from "../../layouts/public.layout";
-import { Stack, Typography } from "../../shared/components";
+import { Stack } from "../../shared/components";
 import { useProjects } from "../../shared/hooks";
+import { TopBar } from "../../widgets/top-bar";
 
 const Projects: NextPage = () => {
   const { projects } = useProjects();
+
   return (
     <PublicLayout>
-      <Typography component="h1">Заголовок страницы</Typography>
+      <TopBar title="Проекты" />
 
       <Stack wrap>
         {projects.map((project) => (
-          <ProjectCard key={project.id} data={project} />
+          <ProjectCard
+            key={project.id}
+            data={project}
+            link={`projects/${project.id}`}
+          />
         ))}
       </Stack>
-
-      <div>123123</div>
     </PublicLayout>
   );
 };

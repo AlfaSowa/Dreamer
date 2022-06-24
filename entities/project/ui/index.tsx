@@ -1,14 +1,16 @@
-import { FC } from "react";
-import { IProjects } from "../../../shared/api/types";
+import { FC, useEffect } from "react";
+import { Project } from "../../../shared/api/models";
 import { Button, Card, Stack, Typography } from "../../../shared/components";
+import { useProjects } from "../../../shared/hooks";
 
 interface IProjectCard {
-  data: IProjects;
+  data: Project;
+  link?: string;
 }
-const ProjectCard: FC<IProjectCard> = ({ data: p }) => {
+const ProjectCard: FC<IProjectCard> = ({ data: p, link }) => {
   return (
-    <Card>
-      <Typography component="h5">{p.id}</Typography>
+    <Card link={link}>
+      <Typography component="h5">{p.name}</Typography>
 
       <div>
         <div>23423</div>
@@ -26,6 +28,10 @@ const ProjectCard: FC<IProjectCard> = ({ data: p }) => {
       </Stack>
     </Card>
   );
+};
+
+ProjectCard.defaultProps = {
+  link: null,
 };
 
 export default ProjectCard;
