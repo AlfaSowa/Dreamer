@@ -8,6 +8,8 @@ import { TopBar } from "../../widgets/top-bar";
 const Projects: NextPage = () => {
   const { projects } = useProjects();
 
+  console.log("Projects page>>>", projects);
+
   return (
     <PublicLayout>
       <TopBar title="Проекты" />

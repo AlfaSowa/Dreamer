@@ -1,6 +1,5 @@
 import { FC } from "react";
-import { NavigationSidebar } from "../features/navigation-sidebar";
-import { ProjectsSidebar } from "../features/projects-sidebar";
+import { NavigationSidebar, ProjectsSidebar } from "../features/sidebar";
 import { Container } from "../shared/components";
 import { MainBlock } from "../widgets/main";
 import { Sidebar } from "../widgets/sidebar";

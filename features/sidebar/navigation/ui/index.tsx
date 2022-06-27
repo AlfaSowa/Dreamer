@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { SidebarItem, SidebarList } from "../../../widgets/sidebar";
+import { SidebarItem, SidebarList } from "../../../../widgets/sidebar";
 
 const NavigationSidebar: FC = () => {
   return (

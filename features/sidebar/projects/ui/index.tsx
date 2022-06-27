@@ -1,15 +1,17 @@
-import { FC, useEffect } from "react";
-import { ButtonIcon, Stack, Typography } from "../../../shared/components";
-import { useProjects } from "../../../shared/hooks";
+import { FC } from "react";
+import { ButtonIcon, Stack, Typography } from "../../../../shared/components";
+import { useProjects } from "../../../../shared/hooks";
 
 const ProjectsSidebar: FC = () => {
   const { projects, getProjects } = useProjects();
 
-  useEffect(() => {
-    if (projects.length === 0) {
-      getProjects();
-    }
-  }, [getProjects, projects.length]);
+  console.log("ProjectsSidebar", projects);
+
+  // useEffect(() => {
+  //   if (projects.length === 0) {
+  //     getProjects();
+  //   }
+  // }, [getProjects, projects.length]);
 
   return (
     <div>

@@ -1,6 +1,6 @@
 import { useStore } from "effector-react";
 import { useCallback } from "react";
-import { $projects, getProjectsListFx } from "../model/projects";
+import { $projects, getProjectsListFx } from "../../entities/project/model";
 
 const useProjects = () => {
   const projects = useStore($projects);
