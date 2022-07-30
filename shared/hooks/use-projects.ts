@@ -3,7 +3,7 @@ import { useCallback } from "react";
 import { $projects, getProjectsListFx } from "../../entities/project/model";
 
 const useProjects = () => {
-  const projects = useStore($projects);
+  const { projects, isLoad } = useStore($projects);
 
   const getProjects = useCallback(() => {
     getProjectsListFx();
@@ -12,6 +12,7 @@ const useProjects = () => {
   return {
     projects,
     getProjects,
+    isLoad,
   };
 };
 

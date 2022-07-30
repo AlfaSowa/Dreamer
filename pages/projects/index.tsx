@@ -8,19 +8,13 @@ import { TopBar } from "../../widgets/top-bar";
 const Projects: NextPage = () => {
   const { projects } = useProjects();
 
-  console.log("Projects page>>>", projects);
-
   return (
     <PublicLayout>
       <TopBar title="Проекты" />
 
       <Stack wrap>
-        {projects.map((project) => (
-          <ProjectCard
-            key={project.id}
-            data={project}
-            link={`projects/${project.id}`}
-          />
+        {projects.map((p) => (
+          <ProjectCard key={p.id} data={p} />
         ))}
       </Stack>
     </PublicLayout>

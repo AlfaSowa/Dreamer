@@ -4,15 +4,17 @@ import { Container } from "../shared/components";
 import { MainBlock } from "../widgets/main";
 import { Sidebar } from "../widgets/sidebar";
 
-const PublicLayout: FC = ({ children }) => (
-  <Container>
-    <Sidebar>
-      <NavigationSidebar />
-      <ProjectsSidebar />
-    </Sidebar>
+const PublicLayout: FC = ({ children }) => {
+  return (
+    <Container>
+      <Sidebar>
+        <NavigationSidebar />
+        <ProjectsSidebar />
+      </Sidebar>
 
-    <MainBlock>{children}</MainBlock>
-  </Container>
-);
+      <MainBlock>{children}</MainBlock>
+    </Container>
+  );
+};
 
 export default PublicLayout;

@@ -1,37 +1,18 @@
-import { FC, useEffect } from "react";
+import { FC } from "react";
 import { Project } from "../../../shared/api/models";
 import { Button, Card, Stack, Typography } from "../../../shared/components";
-import { useProjects } from "../../../shared/hooks";
 
 interface IProjectCard {
   data: Project;
-  link?: string;
 }
-const ProjectCard: FC<IProjectCard> = ({ data: p, link }) => {
+const ProjectCard: FC<IProjectCard> = ({ data: p }) => {
   return (
-    <Card link={link}>
+    <Card link={`projects/${p.id}`}>
       <Typography component="h5">{p.name}</Typography>
 
-      <div>
-        <div>23423</div>
-        <div>23423</div>
-        <div>23423</div>
-        <div>23423</div>
-        <div>23423</div>
-        <div>23423</div>
-        <div>23423</div>
-      </div>
-
-      <Stack>
-        <Button onClick={() => {}}>кнопка</Button>
-        <Button onClick={() => {}}>кнопка</Button>
-      </Stack>
+      {p.description && <div>{p.description}</div>}
     </Card>
   );
-};
-
-ProjectCard.defaultProps = {
-  link: null,
 };
 
 export default ProjectCard;

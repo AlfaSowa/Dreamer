@@ -14,7 +14,7 @@ const TopBar: FC<ITopBar> = ({ children, title }) => {
         </Typography>
       )}
 
-      <div className="flex items-center">{children}</div>
+      {children && <div className="flex items-center">{children}</div>}
     </div>
   );
 };
