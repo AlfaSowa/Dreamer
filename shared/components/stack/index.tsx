@@ -1,10 +1,11 @@
 import clsx from "clsx";
-import { FC } from "react";
+import { FC, ReactNode } from "react";
 import { IBaseElemet } from "../interface";
 
 interface IStack extends IBaseElemet {
   direction?: "row" | "col";
   wrap?: boolean;
+  children: ReactNode;
 }
 
 const Stack: FC<IStack> = ({ children, className, direction, wrap }) => {

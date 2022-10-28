@@ -1,9 +1,10 @@
-import { FC } from "react";
+import { FC, ReactNode } from "react";
 import { IBaseElemet } from "../interface";
 
 export interface IButton extends IBaseElemet {
   onClick: () => void;
   size?: "small" | "normal" | "big";
+  children: ReactNode;
 }
 
 export const Button: FC<IButton> = ({ children, onClick, size }) => {

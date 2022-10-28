@@ -1,8 +1,10 @@
-import clsx from "clsx";
-import { FC } from "react";
+import { FC, ReactNode } from "react";
 
-const Container: FC = ({ children }) => {
-  return <div className={clsx("flex")}>{children}</div>;
+interface IContainer {
+  children: ReactNode;
+}
+const Container: FC<IContainer> = ({ children }) => {
+  return <div className="flex">{children}</div>;
 };
 
 export default Container;

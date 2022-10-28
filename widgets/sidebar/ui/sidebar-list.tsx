@@ -1,6 +1,10 @@
-import { FC } from "react";
+import { FC, ReactNode } from "react";
 
-export const SidebarList: FC = ({ children }) => (
+interface ISidebarList {
+  children: ReactNode;
+}
+
+export const SidebarList: FC<ISidebarList> = ({ children }) => (
   <nav>
     <ul>{children}</ul>
   </nav>

@@ -1,8 +1,9 @@
 import Link from "next/link";
-import { FC } from "react";
+import { FC, ReactNode } from "react";
 
 interface ISidebarItem {
   link?: string;
+  children: ReactNode;
 }
 
 export const SidebarItem: FC<ISidebarItem> = ({ children, link }) => (

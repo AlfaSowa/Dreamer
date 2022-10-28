@@ -1,9 +1,10 @@
 import clsx from "clsx";
-import { createElement, FC } from "react";
+import { createElement, FC, ReactNode } from "react";
 
 interface ITypography {
   component?: "span" | "p" | "h1" | "h5";
   className?: string;
+  children: ReactNode;
 }
 
 const Typography: FC<ITypography> = ({ children, component, className }) => {

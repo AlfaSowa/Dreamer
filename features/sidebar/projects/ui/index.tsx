@@ -1,14 +1,21 @@
+import Link from "next/link";
 import { FC, useEffect } from "react";
-import { ButtonIcon, Stack, Typography } from "../../../../shared/components";
+import {
+  Button,
+  ButtonIcon,
+  Stack,
+  Typography,
+} from "../../../../shared/components";
 import { useProjects } from "../../../../shared/hooks";
 
 const ProjectsSidebar: FC = () => {
-  const { projects, getProjects, isLoad } = useProjects();
-
-  console.log("ProjectsSidebar", projects);
+  const { projects, getProjects, addNewProject, deleteProject, isLoad } =
+    useProjects();
 
   useEffect(() => {
     if (!isLoad) {
+      console.log(123);
+
       getProjects();
     }
   }, [getProjects, isLoad]);
@@ -19,7 +26,7 @@ const ProjectsSidebar: FC = () => {
         <Typography>Список проектов</Typography>
 
         <Stack className="ml-auto hidden group-hover:flex">
-          <ButtonIcon size="small" onClick={() => {}}>
+          <ButtonIcon size="small" onClick={addNewProject}>
             +
           </ButtonIcon>
           <ButtonIcon size="small" onClick={() => {}}>
@@ -32,10 +39,14 @@ const ProjectsSidebar: FC = () => {
         <Stack direction="col" className="mt-2">
           {projects.map((d) => (
             <div
-              className="h-[24px] flex items-center hover:bg-sky-700 px-2 cursor-pointer"
+              className="h-[24px] flex items-center justify-between hover:bg-sky-700 px-2 cursor-pointer"
               key={d.id}
             >
-              {d.id}
+              <Link href={`/projects/${d.id}`}>
+                <a>{d.name}</a>
+              </Link>
+
+              <Button onClick={() => deleteProject(d.id)}>удалить</Button>
             </div>
           ))}
         </Stack>

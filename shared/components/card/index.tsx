@@ -1,9 +1,11 @@
 import Link from "next/link";
-import { FC } from "react";
+import { FC, ReactNode } from "react";
 
 interface ICard {
   link?: string;
+  children: ReactNode;
 }
+
 const Card: FC<ICard> = ({ children, link }) => {
   if (link) {
     return (

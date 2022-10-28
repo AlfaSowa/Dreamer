@@ -1,16 +1,17 @@
 import clsx from "clsx";
-import { FC } from "react";
+import { FC, ReactNode } from "react";
 
-const MainBlock: FC = ({ children }) => (
+interface IMainBlock {
+  children: ReactNode;
+}
+const MainBlock: FC<IMainBlock> = ({ children }) => (
   <main
     className={clsx(
       "min-h-screen",
       "max-h-screen",
       "overflow-y-auto",
       "bg-[color:var(--color-bg)]",
-      "flex-1",
-      "p-4",
-      "pt-4"
+      "flex-1"
     )}
   >
     {children}

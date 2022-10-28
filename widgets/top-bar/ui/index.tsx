@@ -1,18 +1,26 @@
-import { FC } from "react";
-import { Typography } from "../../../shared/components";
+import { useRouter } from "next/router";
+import { FC, ReactNode } from "react";
+import ArrowBackIcon from "@mui/icons-material/ArrowBack";
+import { Button, Typography } from "../../../shared/components";
 
 interface ITopBar {
   title?: string;
+  backArrow?: boolean;
+  children?: ReactNode;
 }
 
-const TopBar: FC<ITopBar> = ({ children, title }) => {
+const TopBar: FC<ITopBar> = ({ children, title, backArrow }) => {
+  const router = useRouter();
+
   return (
-    <div className="min-h-[40px]">
-      {title && (
-        <Typography className="mb-2" component="h1">
-          {title}
-        </Typography>
+    <div className="h-16 flex items-center gap-2 px-2 border-b-2 border-red-400">
+      {backArrow && (
+        <Button onClick={() => router.back()}>
+          <ArrowBackIcon />
+        </Button>
       )}
+
+      {title && <Typography component="h1">{title}</Typography>}
 
       {children && <div className="flex items-center">{children}</div>}
     </div>
@@ -21,6 +29,8 @@ const TopBar: FC<ITopBar> = ({ children, title }) => {
 
 TopBar.defaultProps = {
   title: null,
+  backArrow: false,
+  children: null,
 };
 
 export default TopBar;
