@@ -4,7 +4,7 @@ interface IHeader {
   title?: string;
 }
 
-const Header: FC<IHeader> = ({ title }) => (
+export const Header: FC<IHeader> = ({ title }) => (
   <header>
     <div>
       <div>
@@ -19,5 +19,3 @@ const Header: FC<IHeader> = ({ title }) => (
 Header.defaultProps = {
   title: null,
 };
-
-export default Header;

@@ -6,7 +6,7 @@ interface ICard {
   children: ReactNode;
 }
 
-const Card: FC<ICard> = ({ children, link }) => {
+export const Card: FC<ICard> = ({ children, link }) => {
   if (link) {
     return (
       <Link href={link}>
@@ -27,5 +27,3 @@ const Card: FC<ICard> = ({ children, link }) => {
 Card.defaultProps = {
   link: null,
 };
-
-export default Card;

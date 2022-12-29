@@ -1,5 +1,4 @@
 import { FC, ReactNode } from "react";
-import { NavigationSidebar, ProjectsSidebar } from "../features/sidebar";
 import { Container } from "../shared/components";
 import { MainBlock } from "../widgets/main";
 import { Sidebar } from "../widgets/sidebar";
@@ -11,11 +10,7 @@ interface IPublicLayout {
 const PublicLayout: FC<IPublicLayout> = ({ children }) => {
   return (
     <Container>
-      <Sidebar>
-        <NavigationSidebar />
-        <ProjectsSidebar />
-      </Sidebar>
-
+      <Sidebar />
       <MainBlock>{children}</MainBlock>
     </Container>
   );

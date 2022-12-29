@@ -4,7 +4,7 @@ import { FC, ReactNode } from "react";
 interface IMainBlock {
   children: ReactNode;
 }
-const MainBlock: FC<IMainBlock> = ({ children }) => (
+export const MainBlock: FC<IMainBlock> = ({ children }) => (
   <main
     className={clsx(
       "min-h-screen",
@@ -17,5 +17,3 @@ const MainBlock: FC<IMainBlock> = ({ children }) => (
     {children}
   </main>
 );
-
-export default MainBlock;

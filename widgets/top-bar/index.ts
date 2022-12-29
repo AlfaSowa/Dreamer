@@ -1,1 +1,1 @@
-export { default as TopBar } from "./ui";
+export * from "./ui";

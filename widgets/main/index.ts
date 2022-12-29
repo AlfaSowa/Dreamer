@@ -1,1 +1,1 @@
-export { default as MainBlock } from "./ui";
+export * from "./ui";

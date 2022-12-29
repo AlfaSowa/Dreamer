@@ -1,1 +1,1 @@
-export { default as NavigationSidebar } from "./ui";
+export * from "./ui";

@@ -1,1 +1,2 @@
-export { default as ProjectCard } from "./ui";
+export * from "./ui";
+export * as projectModel from "./model";

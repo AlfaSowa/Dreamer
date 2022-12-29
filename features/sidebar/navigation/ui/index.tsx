@@ -1,7 +1,7 @@
 import { FC } from "react";
-import { SidebarItem, SidebarList } from "../../../../widgets/sidebar";
+import { SidebarItem, SidebarList } from "../../../../entities/sidebar";
 
-const NavigationSidebar: FC = () => {
+export const NavigationSidebar: FC = () => {
   return (
     <SidebarList>
       <SidebarItem link="/">Главная</SidebarItem>
@@ -9,5 +9,3 @@ const NavigationSidebar: FC = () => {
     </SidebarList>
   );
 };
-
-export default NavigationSidebar;

@@ -8,14 +8,12 @@ import {
 } from "../../../../shared/components";
 import { useProjects } from "../../../../shared/hooks";
 
-const ProjectsSidebar: FC = () => {
+export const ProjectsSidebar: FC = () => {
   const { projects, getProjects, addNewProject, deleteProject, isLoad } =
     useProjects();
 
   useEffect(() => {
     if (!isLoad) {
-      console.log(123);
-
       getProjects();
     }
   }, [getProjects, isLoad]);
@@ -54,5 +52,3 @@ const ProjectsSidebar: FC = () => {
     </div>
   );
 };
-
-export default ProjectsSidebar;

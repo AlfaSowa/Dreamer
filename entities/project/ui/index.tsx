@@ -1,11 +1,12 @@
 import { FC } from "react";
 import { Project } from "../../../shared/api/models";
-import { Button, Card, Stack, Typography } from "../../../shared/components";
+import { Card, Typography } from "../../../shared/components";
 
 interface IProjectCard {
   data: Project;
 }
-const ProjectCard: FC<IProjectCard> = ({ data: p }) => {
+
+export const ProjectCard: FC<IProjectCard> = ({ data: p }) => {
   return (
     <Card link={`projects/${p.id}`}>
       <Typography component="h5">{p.name}</Typography>
@@ -14,5 +15,3 @@ const ProjectCard: FC<IProjectCard> = ({ data: p }) => {
     </Card>
   );
 };
-
-export default ProjectCard;

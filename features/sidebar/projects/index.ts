@@ -1,1 +1,1 @@
-export { default as ProjectsSidebar } from "./ui";
+export * from "./ui";

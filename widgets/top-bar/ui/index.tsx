@@ -9,7 +9,7 @@ interface ITopBar {
   children?: ReactNode;
 }
 
-const TopBar: FC<ITopBar> = ({ children, title, backArrow }) => {
+export const TopBar: FC<ITopBar> = ({ children, title, backArrow }) => {
   const router = useRouter();
 
   return (
@@ -32,5 +32,3 @@ TopBar.defaultProps = {
   backArrow: false,
   children: null,
 };
-
-export default TopBar;
