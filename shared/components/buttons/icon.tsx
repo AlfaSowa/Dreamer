@@ -1,14 +1,13 @@
 import clsx from "clsx";
-import { FC, useCallback } from "react";
 import { IButton } from "./button";
 
 type IButtonIcon = IButton;
 
-export const ButtonIcon: FC<IButtonIcon> = ({
+export const ButtonIcon = ({
   onClick,
   children,
   size = "normal",
-}) => {
+}: IButtonIcon) => {
   return (
     <button
       className={clsx(

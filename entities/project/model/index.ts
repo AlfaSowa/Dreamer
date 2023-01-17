@@ -7,7 +7,7 @@ type ProjectsStore = {
   isLoad: boolean;
 };
 
-const ProjectsInitial: ProjectsStore = {
+const projectsInitial: ProjectsStore = {
   projects: [],
   isLoad: false,
 };
@@ -26,7 +26,7 @@ export const deleteProjectFx = createEffect((id: string) => {
 
 const updateProjectsList = createEvent();
 
-export const $projects = createStore<ProjectsStore>(ProjectsInitial)
+export const $projects = createStore<ProjectsStore>(projectsInitial)
   .on(getProjectsListFx.doneData, (state, payload) => {
     return { ...state, projects: payload, isLoad: true };
   })

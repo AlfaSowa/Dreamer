@@ -1,10 +1,10 @@
 import clsx from "clsx";
-import { FC, ReactNode } from "react";
+import { ReactNode } from "react";
 
 interface IMainBlock {
   children: ReactNode;
 }
-export const MainBlock: FC<IMainBlock> = ({ children }) => (
+export const MainBlock = ({ children }: IMainBlock) => (
   <main
     className={clsx(
       "min-h-screen",

@@ -1,5 +1,5 @@
 import clsx from "clsx";
-import { FC, ReactNode } from "react";
+import { ReactNode } from "react";
 import { IBaseElemet } from "../interface";
 
 interface IStack extends IBaseElemet {
@@ -8,7 +8,7 @@ interface IStack extends IBaseElemet {
   children: ReactNode;
 }
 
-const Stack: FC<IStack> = ({ children, className, direction, wrap }) => {
+const Stack = ({ children, className, direction, wrap }: IStack) => {
   return (
     <div
       className={clsx(

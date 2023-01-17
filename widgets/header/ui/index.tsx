@@ -1,10 +1,8 @@
-import { FC } from "react";
-
 interface IHeader {
   title?: string;
 }
 
-export const Header: FC<IHeader> = ({ title }) => (
+export const Header = ({ title }: IHeader) => (
   <header>
     <div>
       <div>

@@ -1,6 +1,4 @@
-import { FC } from "react";
-
-export const Avatar: FC = () => {
+export const Avatar = () => {
   return (
     <div>
       <div className="relative mx-auto w-6/12">

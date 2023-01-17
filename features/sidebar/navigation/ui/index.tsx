@@ -1,7 +1,6 @@
-import { FC } from "react";
 import { SidebarItem, SidebarList } from "../../../../entities/sidebar";
 
-export const NavigationSidebar: FC = () => {
+export const NavigationSidebar = () => {
   return (
     <SidebarList>
       <SidebarItem link="/">Главная</SidebarItem>

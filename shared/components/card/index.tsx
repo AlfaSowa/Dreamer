@@ -1,12 +1,12 @@
 import Link from "next/link";
-import { FC, ReactNode } from "react";
+import { ReactNode } from "react";
 
 interface ICard {
   link?: string;
   children: ReactNode;
 }
 
-export const Card: FC<ICard> = ({ children, link }) => {
+export const Card = ({ children, link }: ICard) => {
   if (link) {
     return (
       <Link href={link}>

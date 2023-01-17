@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { FC, useEffect } from "react";
+import { useEffect } from "react";
 import {
   Button,
   ButtonIcon,
@@ -8,7 +8,7 @@ import {
 } from "../../../../shared/components";
 import { useProjects } from "../../../../shared/hooks";
 
-export const ProjectsSidebar: FC = () => {
+export const ProjectsSidebar = () => {
   const { projects, getProjects, addNewProject, deleteProject, isLoad } =
     useProjects();
 

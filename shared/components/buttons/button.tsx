@@ -1,4 +1,4 @@
-import { FC, ReactNode } from "react";
+import { ReactNode } from "react";
 import { IBaseElemet } from "../interface";
 
 export interface IButton extends IBaseElemet {
@@ -7,7 +7,7 @@ export interface IButton extends IBaseElemet {
   children: ReactNode;
 }
 
-export const Button: FC<IButton> = ({ children, onClick, size }) => {
+export const Button = ({ children, onClick, size }: IButton) => {
   return (
     <button onClick={onClick} type="button">
       {children}

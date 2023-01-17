@@ -1,5 +1,5 @@
 import { useRouter } from "next/router";
-import { FC, ReactNode } from "react";
+import { ReactNode } from "react";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import { Button, Typography } from "../../../shared/components";
 
@@ -9,7 +9,7 @@ interface ITopBar {
   children?: ReactNode;
 }
 
-export const TopBar: FC<ITopBar> = ({ children, title, backArrow }) => {
+export const TopBar = ({ children, title, backArrow }: ITopBar) => {
   const router = useRouter();
 
   return (

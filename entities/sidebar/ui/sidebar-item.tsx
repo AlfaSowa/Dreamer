@@ -1,12 +1,12 @@
 import Link from "next/link";
-import { FC, ReactNode } from "react";
+import { ReactNode } from "react";
 
 interface ISidebarItem {
   link?: string;
   children: ReactNode;
 }
 
-export const SidebarItem: FC<ISidebarItem> = ({ children, link }) => (
+export const SidebarItem = ({ children, link }: ISidebarItem) => (
   <li>
     {!link && (
       <div className="flex items-center h-[30px] px-2 hover:bg-sky-700">

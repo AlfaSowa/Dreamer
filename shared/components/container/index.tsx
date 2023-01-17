@@ -1,9 +1,9 @@
-import { FC, ReactNode } from "react";
+import { ReactNode } from "react";
 
 interface IContainer {
   children: ReactNode;
 }
-const Container: FC<IContainer> = ({ children }) => {
+const Container = ({ children }: IContainer) => {
   return <div className="flex">{children}</div>;
 };
 

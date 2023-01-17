@@ -1,4 +1,3 @@
-import { FC } from "react";
 import { Project } from "../../../shared/api/models";
 import { Card, Typography } from "../../../shared/components";
 
@@ -6,7 +5,7 @@ interface IProjectCard {
   data: Project;
 }
 
-export const ProjectCard: FC<IProjectCard> = ({ data: p }) => {
+export const ProjectCard = ({ data: p }: IProjectCard) => {
   return (
     <Card link={`projects/${p.id}`}>
       <Typography component="h5">{p.name}</Typography>

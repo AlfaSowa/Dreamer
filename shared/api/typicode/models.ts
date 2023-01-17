@@ -18,3 +18,10 @@ export interface Project {
   progress: number;
   stages: Stage[];
 }
+
+export interface User {
+  id: string;
+  name: string;
+  email: string;
+  lastLoginAt: Date;
+}
