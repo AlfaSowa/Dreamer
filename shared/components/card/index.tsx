@@ -1,29 +1,27 @@
-import Link from "next/link";
-import { ReactNode } from "react";
+import { ReactNode, useMemo } from "react";
+import { BaseCard } from "./base";
+import { LinkCard } from "./link";
 
 interface ICard {
   link?: string;
   children: ReactNode;
+  onClick?: () => void;
 }
 
-export const Card = ({ children, link }: ICard) => {
-  if (link) {
-    return (
-      <Link href={link}>
-        <a className="block flex-[0_0_calc(100%/4)] p-[4px]">
-          <div className="bg-blue-900 p-1">{children}</div>
-        </a>
-      </Link>
-    );
-  }
+export const Card = ({ children, link, onClick }: ICard) => {
+  const isLink = useMemo(() => {
+    return link && !onClick;
+  }, [link, onClick]);
 
   return (
-    <div className="flex-[0_0_calc(100%/4)] p-[4px]">
-      <div className="bg-red-400 p-1">{children}</div>
-    </div>
+    <>
+      {isLink && <LinkCard link={link}>{children}</LinkCard>}
+      {!isLink && <BaseCard onClick={onClick}>{children}</BaseCard>}
+    </>
   );
 };
 
 Card.defaultProps = {
   link: null,
+  onClick: null,
 };

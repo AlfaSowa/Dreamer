@@ -12,11 +12,16 @@ type Stage = {
 export interface Project {
   id: string;
   name: string;
-  description: string;
+  description?: string;
   dateStart: string;
   dateEnd: string;
   progress: number;
   stages: Stage[];
+}
+
+export interface EmptyProject {
+  name: string;
+  description?: string;
 }
 
 export interface User {
