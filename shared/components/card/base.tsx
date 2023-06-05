@@ -1,4 +1,4 @@
-import { ReactNode, useCallback } from "react";
+import { ReactNode } from "react";
 
 interface IBaseCard {
   children: ReactNode;
@@ -7,14 +7,14 @@ interface IBaseCard {
 
 export const BaseCard = ({ children, onClick }: IBaseCard) => {
   return (
-    <div className="flex-[0_0_calc(100%/4)] p-1">
-      <div
-        className="bg-red-400 p-1 min-h-[60px]"
-        aria-hidden="true"
-        {...(onClick && { onClick })}
-      >
-        {children}
-      </div>
+    <div
+      className={`p-1 min-h-[60px]${
+        onClick ? " cursor-pointer" : ""
+      } rounded border-dashed border border-red-400`}
+      {...(onClick && { onClick })}
+      aria-hidden="true"
+    >
+      {children}
     </div>
   );
 };

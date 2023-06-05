@@ -1,8 +1,9 @@
 import { ReactNode, useMemo } from "react";
 import { BaseCard } from "./base";
 import { LinkCard } from "./link";
+import { IBaseElemet } from "../interface";
 
-interface ICard {
+interface ICard extends IBaseElemet {
   link?: string;
   children: ReactNode;
   onClick?: () => void;
@@ -13,11 +14,10 @@ export const Card = ({ children, link, onClick }: ICard) => {
     return link && !onClick;
   }, [link, onClick]);
 
-  return (
-    <>
-      {isLink && <LinkCard link={link}>{children}</LinkCard>}
-      {!isLink && <BaseCard onClick={onClick}>{children}</BaseCard>}
-    </>
+  return isLink ? (
+    <LinkCard link={link}>{children}</LinkCard>
+  ) : (
+    <BaseCard onClick={onClick}>{children}</BaseCard>
   );
 };
 

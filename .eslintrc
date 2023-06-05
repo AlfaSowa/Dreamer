@@ -29,6 +29,10 @@
     "jsx-a11y/anchor-is-valid": "off",
     "jsx-a11y/label-has-associated-control": "off",
     "no-underscore-dangle": "off",
-    "@typescript-eslint/require-await": "off"
+    "@typescript-eslint/require-await": "off",
+    "@typescript-eslint/naming-convention": [
+      "error",
+      { "selector": "enum", "format": ["UPPER_CASE"] }
+    ]
   }
 }
