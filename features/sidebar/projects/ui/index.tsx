@@ -27,6 +27,7 @@ export const ProjectsSidebar = () => {
           <ButtonIcon size="small" onClick={addNewProject}>
             +
           </ButtonIcon>
+
           <ButtonIcon size="small" onClick={() => {}}>
             ...
           </ButtonIcon>
