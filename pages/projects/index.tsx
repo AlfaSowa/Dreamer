@@ -1,8 +1,8 @@
 import { NextPage } from "next";
 import { useState } from "react";
+import { Box } from "bucket-of-fries";
 import { ProjectCard } from "../../entities/project";
 import PublicLayout from "../../layouts/public.layout";
-import Box from "../../shared/components/box";
 import { useProjects } from "../../shared/hooks";
 import { TopBar } from "../../widgets/top-bar";
 import { TITLES } from "../../service/constants";

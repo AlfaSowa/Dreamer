@@ -8,7 +8,7 @@ import {
   getProjectsListFx,
 } from "../../entities/project/model";
 
-const useProjects = () => {
+export const useProjects = () => {
   const router = useRouter();
   const { projects, isLoad } = useStore($projects);
 
@@ -40,5 +40,3 @@ const useProjects = () => {
     isLoad,
   };
 };
-
-export default useProjects;

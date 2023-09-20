@@ -1,12 +1,15 @@
+/** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ["./**/*.{ts,tsx}"],
   theme: {
+    // для расширения списка классов добавляем в extend иначе затрет базовую тему
     extend: {
       colors: {
-        "color-card-bg": "var(--color-card-bg)",
-        "color-card-bg-hover": "var(--color-card-bg-hover)",
+        "main-light": "var(--color-primary)",
+        "main-dark": "var(--color-main-dark)",
       },
     },
   },
   plugins: [],
+  darkMode: "class",
 };

@@ -3,6 +3,17 @@
 @tailwind utilities;
 @import "./theme.scss";
 
+@layer utilities {
+  .dr-dark {
+    background: theme("colors.main-dark");
+    color: theme("colors.main-light");
+  }
+  .dr-light {
+    background: theme("colors.main-light");
+    color: theme("colors.main-dark");
+  }
+}
+
 * {
   box-sizing: border-box;
 }

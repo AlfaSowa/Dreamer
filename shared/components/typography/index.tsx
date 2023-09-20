@@ -10,9 +10,7 @@ interface ITypography {
 const Typography = ({ children, component, className }: ITypography) => {
   return createElement(
     component,
-    {
-      className: clsx({ [className]: className }),
-    },
+    { ...(className && { className }) },
     children
   );
 };

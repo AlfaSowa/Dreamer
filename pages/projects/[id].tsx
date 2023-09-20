@@ -1,6 +1,5 @@
 import { GetServerSideProps, NextPage } from "next";
 import PublicLayout from "../../layouts/public.layout";
-import Box from "../../shared/components/box";
 import { useProjects } from "../../shared/hooks";
 import { TopBar } from "../../widgets/top-bar";
 
@@ -22,8 +21,7 @@ const ProjectById: NextPage = () => {
   return (
     <PublicLayout>
       <TopBar title={currentProject?.name} backArrow />
-
-      <Box>1231231232</Box>
+      12312321
     </PublicLayout>
   );
 };

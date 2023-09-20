@@ -1,9 +1,14 @@
-/* eslint-disable @typescript-eslint/no-unsafe-assignment */
-/* eslint-disable @typescript-eslint/no-unsafe-member-access */
-import "../styles/globals.scss";
 import App, { AppContext, AppProps } from "next/app";
+import { useEffect } from "react";
+import { useToggleTheme } from "../shared/hooks";
 
 function WrappedApp({ Component, pageProps }: AppProps) {
+  const { theme } = useToggleTheme();
+
+  useEffect(() => {
+    document.body.className = theme;
+  }, [theme]);
+
   return <Component {...pageProps} />;
 }
 
@@ -28,6 +33,8 @@ WrappedApp.getInitialProps = async (appContext: AppContext) => {
   return {
     ...appProps,
 
+    /* eslint-disable @typescript-eslint/no-unsafe-assignment */
+    /* eslint-disable @typescript-eslint/no-unsafe-member-access */
     pageProps: {
       ...appProps.pageProps,
     },

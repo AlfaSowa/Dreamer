@@ -1,1 +1,2 @@
-export { default as useProjects } from "./use-projects";
+export * from "./use-projects";
+export * from "./use-toggle-theme";
